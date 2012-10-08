@@ -2,6 +2,8 @@
 
 This gem embedes the jQuery colorpicker plugin miniColors in the Rails asset pipeline.
 
+![Screenshot](https://raw.github.com/kostia/jquery-minicolors-rails/master/screenshot.png)
+
 See https://github.com/claviska/jquery-miniColors
 
 ## Installation
