@@ -1,1 +1,6 @@
-$(function() { $('[data-editor=minicolors]').minicolors() });
+$(function() {
+  $('[data-minicolors]').each(function(i, elem) {
+    var input = $(this);
+    input.minicolors(input.data('minicolors'));
+  });
+});

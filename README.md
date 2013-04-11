@@ -35,8 +35,13 @@ Add to `app/assets/stylesheets/application.css`:
 Just call `miniColors()` with any text-input selector:
 
 ```coffeescript
+// With default options:
 jQuery ->
-  $('input[type=text]').miniColors();
+  $('input[type=text]').minicolors();
+
+// With Bootstrap theme:
+jQuery ->
+  $('input[type=text]').minicolors({theme: 'bootstrap'});
 ```
 
 # With SimpleForm
@@ -46,8 +51,15 @@ See https://github.com/plataformatec/simple_form
 ```erb
 <%# app/views/balloons/_form.html.erb %>
 
+<%# Basic usage: %>
 <%= simple_form_for @balloon do |f| %>
   <%= f.input :color, as: :minicolors %>
+<% end %>
+
+<%# With Bootstrap theme and swatch on the right: %>
+<%= simple_form_for @balloon do |f| %>
+  <%= f.input :color, as: :minicolors, input_html: {data: {
+          minicolors: {theme: :bootstrap, swatchPosition: :right}}} %>
 <% end %>
 ```
 

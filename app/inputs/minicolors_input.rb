@@ -3,7 +3,7 @@ if defined? SimpleForm
     def input_html_options
       options = super
       options[:data] ||= {}
-      options[:data].merge! editor: 'minicolors'
+      options[:data][:minicolors] ||= {}
       options
     end
 
