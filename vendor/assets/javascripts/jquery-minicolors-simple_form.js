@@ -1,1 +1,1 @@
-$(function() { $('[data-editor=minicolors]').miniColors() });
+$(function() { $('[data-editor=minicolors]').minicolors() });
