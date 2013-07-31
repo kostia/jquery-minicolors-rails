@@ -7,6 +7,6 @@ if defined? SimpleForm
       end
     end
 
-    def input_type; :text end
+    def input_type; :string end
   end
 end
