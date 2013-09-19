@@ -1,17 +1,18 @@
 # jQuery colorpicker for Rails
 
+[![Gem Version](https://badge.fury.io/rb/jquery-minicolors-rails.png)](http://badge.fury.io/rb/jquery-minicolors-rails)
 [![Build Status](https://travis-ci.org/kostia/jquery-minicolors-rails.png)](https://travis-ci.org/kostia/jquery-minicolors-rails)
 [![Code Climate](https://codeclimate.com/github/kostia/jquery-minicolors-rails.png)](https://codeclimate.com/github/kostia/jquery-minicolors-rails)
 
-This gem embedes the jQuery colorpicker plugin miniColors in the Rails asset pipeline.
+This gem embeddes the jQuery colorpicker in the Rails asset pipeline.
 
 ![Screenshot](https://raw.github.com/kostia/jquery-minicolors-rails/master/screenshot.png)
 
-See https://github.com/claviska/jquery-miniColors
+See http://labs.abeautifulsite.net/jquery-minicolors/
 
 ## Installation
 
-Add to `Gemfile` run `bundle install`:
+Add to `Gemfile` and run `bundle install`:
 
 ```ruby
 # Gemfile
@@ -22,32 +23,38 @@ Add to `app/assets/javascripts/application.js`:
 
 ```javascript
 //= require jquery # Not included
-//= require jquery-minicolors
+//= require jquery.minicolors
 ```
 
 Add to `app/assets/stylesheets/application.css`:
 
 ```css
 /*
- *= require jquery-minicolors
+ *= require jquery.minicolors
  */
 ```
 
 # Usage
 
-Just call `miniColors()` with any text-input selector:
+Just call `minicolors()` with any text-input selector:
 
 ```coffeescript
-// With default options:
-jQuery ->
-  $('input[type=text]').minicolors();
+# With default options:
+$ -> $('input[type=text]').minicolors()
 
-// With Bootstrap theme:
-jQuery ->
-  $('input[type=text]').minicolors({theme: 'bootstrap'});
+# With Bootstrap theme (Bootstrap-3 is supported):
+$ -> $('input[type=text]').minicolors theme: 'bootstrap'
 ```
 
 # With SimpleForm
+
+Add to `app/assets/javascripts/application.js`:
+
+```javascript
+//= require jquery # Not included
+//= require jquery.minicolors
+//= require jquery.minicolors.simple_form
+```
 
 See https://github.com/plataformatec/simple_form
 
@@ -62,17 +69,14 @@ See https://github.com/plataformatec/simple_form
 <%# With Bootstrap theme and swatch on the right: %>
 <%= simple_form_for @balloon do |f| %>
   <%= f.input :color, as: :minicolors, input_html: {data: {
-          minicolors: {theme: :bootstrap, swatchPosition: :right}}} %>
+          minicolors: {theme: :bootstrap, position: :right}}} %>
 <% end %>
 ```
 
-Add to `app/assets/javascripts/application.js`:
+## Versioning
 
-```javascript
-//= require jquery # Not included
-//= require jquery-minicolors
-//= require jquery-minicolors-simple_form
-```
+Gem has the same version as the vendored minicolors library.
+See https://github.com/claviska/jquery-minicolors.
 
 ## MIT-License
 

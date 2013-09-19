@@ -5,7 +5,7 @@ require 'jquery-minicolors-rails/version'
 Gem::Specification.new do |gem|
   gem.name = 'jquery-minicolors-rails'
   gem.version = JqueryMinicolorsRails::VERSION
-  gem.description = 'Colorpicker-plugin for jQuery, integrated in Rails asset pipeline'
+  gem.description = 'This gem embeddes the jQuery colorpicker in the Rails asset pipeline.'
   gem.summary = gem.description
   gem.homepage = 'https://github.com/kostia/jquery-minicolors-rails'
   gem.authors = ['Kostiantyn Kahanskyi']
