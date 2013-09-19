@@ -34,7 +34,7 @@ Add to `app/assets/stylesheets/application.css`:
  */
 ```
 
-# Usage
+## Usage
 
 Just call `minicolors()` with any text-input selector:
 
@@ -46,7 +46,7 @@ $ -> $('input[type=text]').minicolors()
 $ -> $('input[type=text]').minicolors theme: 'bootstrap'
 ```
 
-# With SimpleForm
+### SimpleForm
 
 Add to `app/assets/javascripts/application.js`:
 
@@ -74,6 +74,8 @@ See https://github.com/plataformatec/simple_form
 ```
 
 ## Versioning
+
+[![Gem Version](https://badge.fury.io/rb/jquery-minicolors-rails.png)](http://badge.fury.io/rb/jquery-minicolors-rails)
 
 Gem has the same version as the vendored minicolors library.
 See https://github.com/claviska/jquery-minicolors.
