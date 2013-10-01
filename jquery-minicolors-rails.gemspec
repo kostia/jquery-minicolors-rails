@@ -10,6 +10,7 @@ Gem::Specification.new do |gem|
   gem.homepage = 'https://github.com/kostia/jquery-minicolors-rails'
   gem.authors = ['Kostiantyn Kahanskyi']
   gem.email = %w[kostiantyn.kahanskyi@googlemail.com]
+  gem.license = 'MIT'
   gem.files = Dir['{app,lib,vendor}/**/*'] + %w[Rakefile README.md]
   gem.add_dependency 'rails', '>= 3.2.8'
   gem.add_dependency 'jquery-rails'
