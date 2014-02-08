@@ -73,6 +73,19 @@ See https://github.com/plataformatec/simple_form
 <% end %>
 ```
 
+## Deployment
+
+As of https://github.com/rails/rails/pull/7968 (Rails > 4.*) the asset pipeline precompile command will ignore the images.
+Since `jquery.minicolors` uses an image for backgrounds you will need to copy this to your assets directory.
+
+```ruby
+# config/deploy.rb
+after :deploy do
+  target = File.join(%W[#{release_path} public assets])
+  run "cp -r `cd #{release_path} && bundle show jquery-minicolors-rails`/vendor/assets/images/jquery.minicolors.png #{target}"
+end
+```
+
 ## Versioning
 
 [![Gem Version](https://badge.fury.io/rb/jquery-minicolors-rails.png)](http://badge.fury.io/rb/jquery-minicolors-rails)
