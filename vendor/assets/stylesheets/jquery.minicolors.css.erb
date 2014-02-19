@@ -5,7 +5,7 @@
 .minicolors-swatch {
   position: absolute;
   vertical-align: middle;
-  background: url(<%= image_path 'jquery.minicolors.png' %>) -80px 0;
+  background: url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) -80px 0;
   border: solid 1px #ccc;
   cursor: text;
   padding: 0;
@@ -73,7 +73,7 @@
   left: 1px;
   width: 150px;
   height: 150px;
-  background: url(<%= image_path 'jquery.minicolors.png' %>) -120px 0;
+  background: url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) -120px 0;
   cursor: crosshair;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .minicolors-slider-saturation .minicolors-grid-inner {
-  background: url(<%= image_path 'jquery.minicolors.png' %>) -270px 0;
+  background: url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) -270px 0;
 }
 
 .minicolors-slider-brightness .minicolors-grid {
@@ -113,7 +113,7 @@
   left: 152px;
   width: 20px;
   height: 150px;
-  background: white url(<%= image_path 'jquery.minicolors.png' %>) 0 0;
+  background: white url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) 0 0;
   cursor: row-resize;
 }
 

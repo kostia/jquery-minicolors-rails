@@ -78,14 +78,11 @@ See https://github.com/plataformatec/simple_form
 As of https://github.com/rails/rails/pull/7968 (Rails > 4.*) the asset pipeline precompile command will ignore the images.
 Since `jquery.minicolors` uses an image for backgrounds you have two options:
 
-#### Option 1: use an optional stylesheet with data-URLs.
+#### Option 1: use data-URLs in the stylesheet.
 
-Just change `app/assets/stylesheets/application.css` to:
-
-```css
-/*
- *= require jquery.minicolors.embedded
- */
+```ruby
+# config/initializers/jquery_minicolors_rails.rb
+JqueryMinicolorsRails.use_data_urls = true
 ```
 
 __Benefit__: simpler deployment setup.
