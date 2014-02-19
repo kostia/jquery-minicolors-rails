@@ -90,8 +90,8 @@ end
 
 [![Gem Version](https://badge.fury.io/rb/jquery-minicolors-rails.png)](http://badge.fury.io/rb/jquery-minicolors-rails)
 
-Gem has the same version as the vendored minicolors library.
-See https://github.com/claviska/jquery-minicolors.
+Gem has the same version as the vendored minicolors library (http://git.io/ZWaGNg)
+__plus__ an extra minor version number.
 
 ## MIT-License
 
