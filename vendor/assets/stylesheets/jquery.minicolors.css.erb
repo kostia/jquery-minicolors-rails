@@ -5,7 +5,13 @@
 .minicolors-swatch {
   position: absolute;
   vertical-align: middle;
-  background: url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) -80px 0;
+
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background: url(<%= JqueryMinicolorsRails.image_data_url :swatch %>) 0 0;
+  <% else %>
+    background: url(<%= image_path 'jquery.minicolors.png' %>) -80px 0;
+  <% end %>
+
   border: solid 1px #ccc;
   cursor: text;
   padding: 0;
@@ -73,7 +79,13 @@
   left: 1px;
   width: 150px;
   height: 150px;
-  background: url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) -120px 0;
+
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background: url(<%= JqueryMinicolorsRails.image_data_url :grid %>) 0 0;
+  <% else %>
+    background: url(<%= image_path 'jquery.minicolors.png' %>) -120px 0;
+  <% end %>
+
   cursor: crosshair;
 }
 
@@ -87,15 +99,27 @@
 }
 
 .minicolors-slider-saturation .minicolors-grid {
-  background-position: -420px 0;
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background-position: -300px 0;
+  <% else %>
+    background-position: -420px 0;
+  <% end %>
 }
 
 .minicolors-slider-saturation .minicolors-grid-inner {
-  background: url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) -270px 0;
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background: url(<%= JqueryMinicolorsRails.image_data_url :grid %>) -150px 0;
+  <% else %>
+    background: url(<%= image_path 'jquery.minicolors.png' %>) -270px 0;
+  <% end %>
 }
 
 .minicolors-slider-brightness .minicolors-grid {
-  background-position: -570px 0;
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background-position: -450px 0;
+  <% else %>
+    background-position: -570px 0;
+  <% end %>
 }
 
 .minicolors-slider-brightness .minicolors-grid-inner {
@@ -103,7 +127,11 @@
 }
 
 .minicolors-slider-wheel .minicolors-grid {
-  background-position: -720px 0;
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background-position: -600px 0;
+  <% else %>
+    background-position: -720px 0;
+  <% end %>
 }
 
 .minicolors-slider,
@@ -113,7 +141,13 @@
   left: 152px;
   width: 20px;
   height: 150px;
-  background: white url(<%= JqueryMinicolorsRails.use_data_urls? ? JqueryMinicolorsRails.image_data_url : image_path('jquery.minicolors.png') %>) 0 0;
+
+  <% if JqueryMinicolorsRails.use_data_urls? %>
+    background: white url(<%= JqueryMinicolorsRails.image_data_url :slider %>) 0 0;
+  <% else %>
+    background: white url(<%= image_path 'jquery.minicolors.png' %>) 0 0;
+  <% end %>
+
   cursor: row-resize;
 }
 
