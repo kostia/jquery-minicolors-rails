@@ -73,22 +73,19 @@ See https://github.com/plataformatec/simple_form
 <% end %>
 ```
 
-## Deployment
+## Configuration
 
 As of https://github.com/rails/rails/pull/7968 (Rails > 4.*) the asset pipeline precompile command will ignore the images.
-Since `jquery.minicolors` uses an image for backgrounds you have two options:
-
-#### Option 1: use data-URLs in the stylesheet.
+Since `jquery.minicolors` uses an image for backgrounds, the image is by default splitted into chunks of data URLs and embedded into the CSS directly.
+This results in a slightly bigger compiled CSS (~50k bigger), but avoids unnecessary image request to the server and headache on deployment.
+You can still instruct `JqueryMinicolorsRails` to use the original image instead of the data URLs:
 
 ```ruby
 # config/initializers/jquery_minicolors_rails.rb
-JqueryMinicolorsRails.use_data_urls = true
+JqueryMinicolorsRails.use_data_urls = false
 ```
 
-__Benefit__: simpler deployment setup.
-__Trade-off__: bigger (~400k) compiled stylesheet.
-
-#### Option 2: copy vendored images to your assets directory.
+Additionally you would also have to copy the image to the deployment target:
 
 ```ruby
 # config/deploy.rb
@@ -97,9 +94,6 @@ after :deploy do
   run "cp -r `cd #{release_path} && bundle show jquery-minicolors-rails`/vendor/assets/images/jquery.minicolors.png #{target}"
 end
 ```
-
-__Benefit__: smaller (~80k) compiled stylesheet.
-__Trade-off__: more complex deployment.
 
 ## Versioning
 
