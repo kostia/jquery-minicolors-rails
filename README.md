@@ -95,6 +95,12 @@ after :deploy do
 end
 ```
 
+## Testing
+
+```bash
+bundle exec rspec
+```
+
 ## Versioning
 
 [![Gem Version](https://badge.fury.io/rb/jquery-minicolors-rails.png)](http://badge.fury.io/rb/jquery-minicolors-rails)
