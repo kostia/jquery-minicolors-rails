@@ -21,7 +21,8 @@ module JqueryMinicolorsRails
     end
 
     def load_image_data_url(name)
-      File.read(File.expand_path("../../vendor/assets/images/jquery.minicolors.#{name}", __FILE__))
+      path = File.expand_path("../../vendor/assets/images/jquery.minicolors.#{name}", __FILE__)
+      File.read(path).strip
     end
   end
 end
