@@ -1,0 +1,5 @@
+.bundle/
+Gemfile.lock
+bin
+log/*.log
+tmp
