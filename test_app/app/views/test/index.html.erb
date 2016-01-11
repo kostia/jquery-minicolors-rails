@@ -1,3 +1,8 @@
-<%= simple_form_for :balloon, url: :root do |f| %>
-  <%= f.input :color, as: :minicolors %>
-<% end %>
+<div class="container">
+  <div class="col-md-3">
+    <%= simple_form_for :balloon, url: :root, html: {class: 'form-horizontal'} do |f| %>
+      <%= f.input :color, as: :minicolors, input_html: {data: {
+            minicolors: {theme: :bootstrap, position: :right}}} %>
+    <% end %>
+  </div>
+</div>
