@@ -3,3 +3,4 @@ Gemfile.lock
 bin
 log/*.log
 tmp
+public/assets
