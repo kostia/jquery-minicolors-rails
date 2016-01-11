@@ -1,3 +1,3 @@
-<form>
-  <input type="text" value="#ffffff">
-</form>
+<%= simple_form_for :balloon, url: :root do |f| %>
+  <%= f.input :color, as: :minicolors %>
+<% end %>
