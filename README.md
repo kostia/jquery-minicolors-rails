@@ -79,6 +79,24 @@ See https://github.com/plataformatec/simple_form
 bundle exec rspec
 ```
 
+Since this gem uses a lot of different frameworks, anything is possible. So despite the specs are
+"green", please verify manually:
+
+```bash
+cd test_app
+bundle
+rails s
+open http://localhost:3000/ # Assert everything looks & works good.
+```
+
+```bash
+rm -rf tmp/cache
+rm -rf public/assets
+RAILS_ENV=production bundle exec rake assets:precompile
+rails s -eproduction
+open http://localhost:3000/ # Assert everything looks & works good.
+```
+
 ## Versioning
 
 [![Gem Version](https://badge.fury.io/rb/jquery-minicolors-rails.png)](http://badge.fury.io/rb/jquery-minicolors-rails)
