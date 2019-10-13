@@ -8,4 +8,4 @@
 
 //= require_self
 
-$ -> $('input[type=text]').minicolors()
+$(function() { $('input[type=text]').minicolors(); });
