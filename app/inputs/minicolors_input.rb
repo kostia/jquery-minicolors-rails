@@ -9,4 +9,6 @@ if defined? SimpleForm
 
     def input_type; :string end
   end
+else
+  class MinicolorsInput; end
 end
